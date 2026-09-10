@@ -1270,8 +1270,7 @@ class _NodeMapScreenState extends State<NodeMapScreen> with SingleTickerProvider
                           child: ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF1E293B), padding: const EdgeInsets.symmetric(vertical: 10)),
                             icon: const Icon(Icons.fork_right, size: 16, color: Color(0xFF38BDF8)),
-                            label: const Text("Alley Fork
-+15 SPAT", textAlign: TextAlign.center, style: TextStyle(fontSize: 10)),
+                            label: const Text("Alley Fork\n+15 SPAT", textAlign: TextAlign.center, style: TextStyle(fontSize: 10)),
                             onPressed: () => _recordPOI("Alley Fork & Dead-End", 15.0),
                           ),
                         ),
@@ -1280,8 +1279,7 @@ class _NodeMapScreenState extends State<NodeMapScreen> with SingleTickerProvider
                           child: ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF1E293B), padding: const EdgeInsets.symmetric(vertical: 10)),
                             icon: const Icon(Icons.storefront, size: 16, color: Color(0xFF2DD4BF)),
-                            label: const Text("Micro-Biz
-+25 SPAT", textAlign: TextAlign.center, style: TextStyle(fontSize: 10)),
+                            label: const Text("Micro-Biz\n+25 SPAT", textAlign: TextAlign.center, style: TextStyle(fontSize: 10)),
                             onPressed: () => _recordPOI("Micro-Home Enterprise", 25.0),
                           ),
                         ),
@@ -1290,8 +1288,7 @@ class _NodeMapScreenState extends State<NodeMapScreen> with SingleTickerProvider
                           child: ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF1E293B), padding: const EdgeInsets.symmetric(vertical: 10)),
                             icon: const Icon(Icons.local_shipping, size: 16, color: Color(0xFFFBBF24)),
-                            label: const Text("Drop-Off
-+50 SPAT", textAlign: TextAlign.center, style: TextStyle(fontSize: 10)),
+                            label: const Text("Drop-Off\n+50 SPAT", textAlign: TextAlign.center, style: TextStyle(fontSize: 10)),
                             onPressed: () => _recordPOI("Van Access Limit", 50.0),
                           ),
                         ),
