@@ -376,7 +376,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.between,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -435,7 +435,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 6.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.between,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     Text("Portfolio Assets", style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white)),
                     Text("Auto-Route: Spatia AMM", style: TextStyle(fontSize: 10, color: Color(0xFF38BDF8), fontFamily: 'monospace')),
