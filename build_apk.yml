@@ -1,0 +1,44 @@
+name: Build Spatia Wallet APK
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Release APK
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Setup Flutter Engine
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+
+      - name: Ensure Android Project Config
+        run: |
+          if [ ! -f "android/build.gradle" ]; then
+            flutter create --org network.spatia --project-name spatia_wallet .
+          fi
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Compile Release APK
+        run: flutter build apk --release
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SpatiaWallet-Release-APK
+          path: build/app/outputs/flutter-apk/app-release.apk
