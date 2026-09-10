@@ -31,6 +31,10 @@ jobs:
             flutter create --org network.spatia --project-name spatia_wallet .
           fi
 
+      - name: Auto Fix Flutter Typo
+        run: |
+          sed -i 's/MainAxisAlignment.between/MainAxisAlignment.spaceBetween/g' lib/main.dart
+
       - name: Install Dependencies
         run: flutter pub get
 
